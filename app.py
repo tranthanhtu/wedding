@@ -2,6 +2,7 @@ from flask import Flask,render_template
 
 app = Flask(__name__)
 
+
 @app.route("/<path:path>")
 def static_file(path):
     return app.send_static_file(path)
@@ -10,7 +11,7 @@ def static_file(path):
 def index():
     return render_template("index.html")
 
-@app.route('/forget')
+@app.route('/forget.html')
 def forget():
     return render_template("forget.html")
 
